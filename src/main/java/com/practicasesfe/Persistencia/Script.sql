@@ -31,8 +31,8 @@ CREATE TABLE estudiantes (
     fecha_ingreso DATETIME,
     promedio_notas DECIMAL(5,2) DEFAULT 0.00,
     modalidad_estudio VARCHAR(50),
-    creado_por INT,
-    FOREIGN KEY (creado_por) REFERENCES usuarios(id_usuario) ON DELETE SET NULL
+    id_usuario INT,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario) ON DELETE SET NULL
 );
 
 -- Tabla de docentes
