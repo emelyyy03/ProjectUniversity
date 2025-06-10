@@ -7,11 +7,11 @@ import java.sql.SQLException; // Representa errores específicos de la base de d
 public class ConnectionManager {
 
     //Cadena de conexion
-    private static final String STR_CONNECTION = "jdbc:sqlserver://LAPTOP-MUNLU2NL\\SQLEXPRESS; " +
+    private static final String STR_CONNECTION = "jdbc:sqlserver://DESKTOP-5PGNA2S\\SQLEXPRESS; " +
             "encrypt=true; " +
             "database=BDUniversidad; " +
             "trustServerCertificate=true;" +
-            "user=Rocio;" +
+            "user=java2025;" +
             "password=12345";
 
     private Connection connection;
