@@ -89,3 +89,8 @@ CREATE TABLE estudiante_horarios (
     FOREIGN KEY (id_horario) REFERENCES horarios(id_horario) ON DELETE CASCADE
 );
 
+--Se modifico la tabla ciclos
+ALTER TABLE ciclos
+ALTER COLUMN nombre_ciclo VARCHAR(50); -- o más si necesitas
+
+
