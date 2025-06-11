@@ -1,6 +1,7 @@
 package com.practicasesfe.dominio;
 
 import java.time.LocalDateTime;
+import java.sql.Date;
 
 public class User {
 
@@ -9,13 +10,13 @@ public class User {
     private String email;
     private String passwordHash;
     private String rol;
-    private LocalDateTime fecha_creacion;
-    private LocalDateTime fecha_act;
+    private Date fecha_creacion;
+    private Date fecha_act;
 
     public User() {
     }
 
-    public User(int id, String name, String email, String passwordHash, String rol, LocalDateTime fecha_creacion, LocalDateTime fecha_act) {
+    public User(int id, String name, String email, String passwordHash, String rol, Date fecha_creacion, Date fecha_act) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -65,19 +66,19 @@ public class User {
         this.rol = rol;
     }
 
-    public LocalDateTime getFecha_creacion() {
+    public Date getFecha_creacion() {
         return fecha_creacion;
     }
 
-    public void setFecha_creacion(LocalDateTime fecha_creacion) {
+    public void setFecha_creacion(Date fecha_creacion) {
         this.fecha_creacion = fecha_creacion;
     }
 
-    public LocalDateTime getFecha_act() {
+    public Date getFecha_act() {
         return fecha_act;
     }
 
-    public void setFecha_act(LocalDateTime fecha_act) {
+    public void setFecha_act(Date fecha_act) {
         this.fecha_act = fecha_act;
     }
 }
