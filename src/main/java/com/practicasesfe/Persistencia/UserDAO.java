@@ -37,7 +37,7 @@ public class UserDAO {
             // Se especifica que se retornen las claves generadas automáticamente.
             PreparedStatement ps = conn.connect().prepareStatement(
                     "INSERT INTO " +
-                            "Users (name, email, passwordHash, rol, fecha_creacion, fecha_act) " +
+                            "usuarios (nombre_usuario, correo, contrasena, rol, fecha_creacion, fecha_actualizacion) " +
                             "VALUES (?, ?, ?, ?, ?, ?)",
                     java.sql.Statement.RETURN_GENERATED_KEYS
             );
@@ -96,9 +96,9 @@ public class UserDAO {
         try{
             // Preparar la sentencia SQL para actualizar la información de un usuario.
             ps = conn.connect().prepareStatement(
-                    "UPDATE Users " +
-                            "SET name = ?, email = ?, rol = ?, fecha_act = ? " +
-                            "WHERE id = ?"
+                    "UPDATE usuarios " +
+                            "SET nombre_usuario = ?, correo = ?, rol = ?, fecha_actualizacion = ? " +
+                            "WHERE id_usuario = ?"
             );
 
             // Establecer los valores de los parámetros en la sentencia preparada.
@@ -140,7 +140,7 @@ public class UserDAO {
         try{
             // Preparar la sentencia SQL para eliminar un usuario por su ID.
             ps = conn.connect().prepareStatement(
-                    "DELETE FROM Users WHERE id = ?"
+                    "DELETE FROM usuarios WHERE id_usuario = ?"
             );
             // Establecer el valor del parámetro en la sentencia preparada (el ID del usuario a eliminar).
             ps.setInt(1, user.getId());
@@ -178,9 +178,9 @@ public class UserDAO {
 
         try {
             // Preparar la sentencia SQL para buscar usuarios por nombre (usando LIKE para búsqueda parcial).
-            ps = conn.connect().prepareStatement("SELECT id, name, email, rol, fecha_creacion, fecha_act " +
-                    "FROM Users " +
-                    "WHERE name LIKE ?");
+            ps = conn.connect().prepareStatement("SELECT id_usuario, nombre_usuario, correo, rol, fecha_creacion, fecha_actualizacion " +
+                    "FROM usuarios " +
+                    "WHERE nombre_usuario LIKE ?");
 
             // Establecer el valor del parámetro en la sentencia preparada.
             // El '%' al inicio y al final permiten la búsqueda de la cadena 'name' en cualquier parte del nombre del usuario.
@@ -231,9 +231,9 @@ public class UserDAO {
 
         try {
             // Preparar la sentencia SQL para seleccionar un usuario por su ID.
-            ps = conn.connect().prepareStatement("SELECT id, name, email, rol, fecha_creacion, fecha_act " +
-                    "FROM Users " +
-                    "WHERE id = ?");
+            ps = conn.connect().prepareStatement("SELECT id_usuario, nombre_usuario, correo, rol, fecha_creacion, fecha_actualizacion " +
+                    "FROM usuarios " +
+                    "WHERE id_usuario = ?");
 
             // Establecer el valor del parámetro en la sentencia preparada (el ID a buscar).
             ps.setInt(1, id);
@@ -289,9 +289,9 @@ public class UserDAO {
         try {
             // Preparar la sentencia SQL para seleccionar un usuario por su correo electrónico,
             // contraseña hasheada y estado activo (status = 1).
-            ps = conn.connect().prepareStatement("SELECT id, name, email, rol, fecha_creacion, fecha_act " +
-                    "FROM Users " +
-                    "WHERE email = ? AND passwordHash = ? AND rol = admin");
+            ps = conn.connect().prepareStatement("SELECT id_usuario, nombre_usuario, correo, rol, fecha_creacion, fecha_actualizacion " +
+                    "FROM usuarios " +
+                    "WHERE correo = ? AND contrasena = ?");
 
             // Establecer los valores de los parámetros en la sentencia preparada.
             ps.setString(1, user.getEmail()); // Asignar el correo electrónico del usuario a autenticar.
@@ -341,9 +341,9 @@ public class UserDAO {
         try{
             // Preparar la sentencia SQL para actualizar solo la columna 'passwordHash' de un usuario.
             ps = conn.connect().prepareStatement(
-                    "UPDATE Users " +
-                            "SET passwordHash = ? " +
-                            "WHERE id = ?"
+                    "UPDATE usuarios " +
+                            "SET contrasena = ? " +
+                            "WHERE id_usuario = ?"
             );
             // Hashear la nueva contraseña proporcionada antes de establecerla en la consulta.
             ps.setString(1, PasswordHasher.hashPassword(user.getPasswordHash()));
