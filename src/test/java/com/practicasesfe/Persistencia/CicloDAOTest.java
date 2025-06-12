@@ -82,14 +82,14 @@ class CicloDAOTest {
         //Se crea un nombre único para evitar duplicados en la BD
         Random random = new Random();
         int num = random.nextInt(1000) + 1;
-        String nombre = "Ciclo05 " + num;
+        String nombre = "Ciclo06 " + num;
 
         //Se crea un nuevo objeto Ciclo
         Ciclo ciclo = new Ciclo(
                 0,
                 nombre,
-                Date.valueOf(LocalDate.of(2025, 7, 10)),
-                Date.valueOf(LocalDate.of(2025, 8, 12))
+                Date.valueOf(LocalDate.of(2025, 4, 1)),
+                Date.valueOf(LocalDate.of(2025, 9, 2))
         );
 
         //Se llama a create (inserta en SQL Server y lo devuelve con ID generado)
@@ -105,9 +105,9 @@ class CicloDAOTest {
     void create() throws SQLException  {
         Ciclo ciclo = new Ciclo(
                 0,
-                "Ciclo04",
-                Date.valueOf(LocalDate.of(2025, 2, 11)),
-                Date.valueOf(LocalDate.of(2025, 4, 5))
+                "Ciclo05",
+                Date.valueOf(LocalDate.of(2025, 3, 12)),
+                Date.valueOf(LocalDate.of(2025, 7, 3))
         );
         Ciclo res = cicloDAO.create(ciclo);
         assertNotNull(res);

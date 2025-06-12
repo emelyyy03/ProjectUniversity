@@ -80,16 +80,16 @@ class EstudiantesDAOTest {
     void testEstudianteDAO() throws SQLException {
         Random random = new Random();
         int num = random.nextInt(1000) + 1;
-        String carnet = "ESF3" + num;
+        String carnet = "ESF4" + num;
 
         Estudiantes estudiante = new Estudiantes(
                 0,
                 carnet,
-                "Nayeli Arriola " + num,
-                "Derecho",
-                LocalDateTime.of(2025, 4, 26, 8, 0),
-                new BigDecimal("10.00"),
-                "Virtual",
+                "Milton Arriola " + num,
+                "Mercadeo",
+                LocalDateTime.of(2025, 8, 26, 7, 0),
+                new BigDecimal("8.00"),
+                "Presencial",
                 null // o puedes poner un ID válido si lo tienes
         );
 
@@ -104,11 +104,11 @@ class EstudiantesDAOTest {
     void create() throws SQLException{
         Estudiantes estudiante = new Estudiantes(
                 0,
-                "ESF04",
-                "Andrea Miranda",
-                "Diseño Grafico",
-                LocalDateTime.of(2025, 7, 8, 7, 30),
-                new BigDecimal("9.00"),
+                "ESF05",
+                "Maragareth Miranda",
+                "Diseño de moda",
+                LocalDateTime.of(2025, 10, 10, 6, 30),
+                new BigDecimal("10.00"),
                 "Presencial",
                 1
         );
