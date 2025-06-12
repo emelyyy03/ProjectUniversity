@@ -27,7 +27,7 @@ public class DocentesDAO {
             PreparedStatement ps = conn.connect().prepareStatement(
                     "INSERT INTO " +
                             "docentes (id_usuario, nombre_completo, titulo, experiencia_anios, fecha_contratacion) " +
-                            "VALUES (?, ?, ?, ?, ?, )",
+                            "VALUES (?, ?, ?, ?, ?)",
                     java.sql.Statement.RETURN_GENERATED_KEYS
             );
             // Establecer los valores de los parámetros en la sentencia preparada.
