@@ -79,15 +79,15 @@ class HorarioDAOTest {
         // Se crea un nombre único para evitar duplicados en la BD
         Random random = new Random();
         int num = random.nextInt(1000) + 1;
-        String nombre = "HorarioT " + num;
+        String nombre = "HorarioN " + num;
 
         // Se crea un nuevo objeto Horario
         Horario horario = new Horario(
                 0,
                 nombre,
-                LocalTime.of(1, 0),
+                LocalTime.of(3, 0),
                 LocalTime.of(6, 0),
-                "Miércoles, Viernes"
+                "Jueves, Viernes"
         );
 
         // Se llama a create (inserta en SQL Server y lo devuelve con ID generado)
@@ -103,9 +103,9 @@ class HorarioDAOTest {
     void create() throws SQLException{
         Horario horario = new Horario(
                 0,
-                "Nocturno",
-                LocalTime.of(7, 0),
-                LocalTime.of(9, 0),
+                "MedioDia",
+                LocalTime.of(8, 0),
+                LocalTime.of(1, 0),
                 "Martes, Miércoles y Jueves"
         );
         Horario res = horarioDAO.create(horario);

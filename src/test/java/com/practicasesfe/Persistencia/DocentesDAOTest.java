@@ -124,7 +124,7 @@ class DocentesDAOTest {
         // Define una cadena base para el email y le concatena el número aleatorio generado.
         String strEmail = "test" + num + "@example.com";
         // Crea un nuevo objeto User con datos de prueba. El ID se establece en 0 ya que será generado por la base de datos.
-        Docente docente = new Docente(1, 1, "Test Docente", "Licenciado", 10.2, fechaContratacion);
+        Docente docente = new Docente(1, 2, "Test Docente", "Maestria", 3.5, fechaContratacion);
 
         // Llama al método 'create' para persistir el usuario de prueba en la base de datos (simulada) y verifica su creación.
         Docente testDocente = create(docente);
@@ -140,7 +140,7 @@ class DocentesDAOTest {
     }
     @Test
     void createDocente() throws SQLException {
-        Docente docente = new Docente(1,1, "Johana Tobar", "Ingeniera", 12.1, fechaContratacion);
+        Docente docente = new Docente(1,1, "Vanesa Turcios", "Ingeniera", 2.5, fechaContratacion);
         Docente res = docenteDAO.create(docente);
         assertNotEquals(res,null);
     }
