@@ -116,7 +116,7 @@ class DocentesDAOTest {
     Date fechaContratacion = Date.valueOf(LocalDate.of(2025, 6, 10));
     //Date fechaActualizacion = Date.valueOf(LocalDate.of(2025, 6, 10));
     @Test
-    void testUserDAO() throws SQLException {
+    void testDocenteDAO() throws SQLException {
         // Crea una instancia de la clase Random para generar datos de prueba aleatorios.
         Random random = new Random();
         // Genera un número aleatorio entre 1 y 1000 para asegurar la unicidad del email en cada prueba.

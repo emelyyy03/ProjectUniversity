@@ -25,16 +25,15 @@ public class MateriasDAO {
             // Se especifica que se retornen las claves generadas automáticamente.
             PreparedStatement ps = conn.connect().prepareStatement(
                     "INSERT INTO " +
-                            "materias (id_materia, nombre_materia, codigo_materia, uv, id_docente) " +
-                            "VALUES (?, ?, ?, ?, ?)",
+                            "materias (nombre_materia, codigo_materia, uv, id_docente) " +
+                            "VALUES (?, ?, ?, ?)",
                     java.sql.Statement.RETURN_GENERATED_KEYS
             );
             // Establecer los valores de los parámetros en la sentencia preparada.
-            ps.setInt(1, materia.getId_materia()); // Asignar el id de la materia.
-            ps.setString(2, materia.getNombre_materia()); // Asignar el nombre de la materia.
-            ps.setString(3, materia.getCodigo_materia()); //Codio de la materia
-            ps.setInt(4, materia.getUv()); //Asignar Uv de la materia
-            ps.setInt(5, materia.getId_docente()); //Asigna Id del docente que imparte la materia
+            ps.setString(1, materia.getNombre_materia()); // Asignar el nombre de la materia.
+            ps.setString(2, materia.getCodigo_materia()); //Codio de la materia
+            ps.setInt(3, materia.getUv()); //Asignar Uv de la materia
+            ps.setInt(4, materia.getId_docente()); //Asigna Id del docente que imparte la materia
 
 
             // Ejecutar la sentencia de inserción y obtener el número de filas afectadas.
@@ -74,16 +73,16 @@ public class MateriasDAO {
             // Preparar la sentencia SQL para actualizar la información de una materia
             ps = conn.connect().prepareStatement(
                     "UPDATE materias " +
-                            "SET id_materia = ?, nombre_materia = ?, codigo_materia = ?, uv = ?, id_docente = ? " +
+                            "SET nombre_materia = ?, codigo_materia = ?, uv = ?, id_docente = ? " +
                             "WHERE id_materia = ?"
             );
 
             // Establecer los valores de los parámetros en la sentencia preparada.
-            ps.setInt(1, materia.getId_materia());  // Asignar el nuevo id de materia.
-            ps.setString(2, materia.getNombre_materia()); // Asignar el nuevo nombre de materia.
-            ps.setString(3, materia.getCodigo_materia()); //Asigna el nuevo codigo de materia
-            ps.setInt(4, materia.getUv()); //Asignar nuevo uv de materia
-            ps.setInt(5, materia.getId_docente());       // Establecer la condición WHERE para identificar la materia a actualizar por su ID.
+            ps.setString(1, materia.getNombre_materia()); // Asignar el nuevo nombre de materia.
+            ps.setString(2, materia.getCodigo_materia()); //Asigna el nuevo codigo de materia
+            ps.setInt(3, materia.getUv()); //Asignar nuevo uv de materia
+            ps.setInt(4, materia.getId_docente());       // Establecer la condición WHERE para identificar la materia a actualizar por su ID.
+            ps.setInt(5, materia.getId_materia());
 
             // Ejecutar la sentencia de actualización y verificar si se afectó alguna fila.
             if(ps.executeUpdate() > 0){
