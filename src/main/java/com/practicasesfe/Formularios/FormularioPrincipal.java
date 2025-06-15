@@ -59,11 +59,11 @@ public class FormularioPrincipal {
         // Agregar formularios al contentPanel
         contentPanel.add(new PerfilForm(), "perfil");
         contentPanel.add(new UsuariosForm(), "usuarios");
-        contentPanel.add(new Estudiantes(), "estudiantes");
+        contentPanel.add(new Estudiantes().getRootPanel(), "estudiantes");
         contentPanel.add(new DocentesForm(), "docentes");
         contentPanel.add(new MateriaForm(), "materia");
-        contentPanel.add(new Horarios(), "horarios");
-        contentPanel.add(new EstudianteHorario(), "estudianteHorario");
+        contentPanel.add(new Horarios().getRootPanel(), "horarios");
+        contentPanel.add(new EstudianteHorario().getRootPanel(), "estudianteHorario");
         contentPanel.add(new Ciclos().getRootPanel(), "ciclos");
         contentPanel.add(new AulasForm(), "aulas");
         contentPanel.add(new ProgramasAcademicosForm(), "programas");
