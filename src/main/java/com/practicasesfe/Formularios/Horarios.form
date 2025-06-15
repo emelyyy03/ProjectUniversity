@@ -164,70 +164,94 @@
         </properties>
         <border type="none"/>
         <children>
-          <component id="51cfd" class="javax.swing.JButton" binding="button1" default-binding="true">
+          <component id="51cfd" class="javax.swing.JButton" binding="guardarButton" default-binding="true">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <background color="-983041"/>
+              <font name="Bodoni MT" size="14" style="0"/>
+              <foreground color="-13421773"/>
+              <text value="Guardar"/>
             </properties>
           </component>
-          <component id="1dd32" class="javax.swing.JButton" binding="button2" default-binding="true">
+          <component id="1dd32" class="javax.swing.JButton" binding="cancelarButton" default-binding="true">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <background color="-983041"/>
+              <font name="Bodoni MT" size="14" style="0"/>
+              <foreground color="-13421773"/>
+              <text value="Cancelar"/>
             </properties>
           </component>
-          <component id="eb3e9" class="javax.swing.JButton" binding="button3" default-binding="true">
+          <component id="eb3e9" class="javax.swing.JButton" binding="buscarButton" default-binding="true">
             <constraints>
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <background color="-10092493"/>
+              <font name="Bodoni MT" size="14" style="0"/>
+              <foreground color="-460552"/>
+              <text value="Buscar"/>
             </properties>
           </component>
-          <component id="16ef1" class="javax.swing.JButton" binding="button4" default-binding="true">
+          <component id="16ef1" class="javax.swing.JButton" binding="nuevoButton" default-binding="true">
             <constraints>
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <background color="-10092493"/>
+              <font name="Bodoni MT" size="14" style="0"/>
+              <foreground color="-460552"/>
+              <text value="Nuevo"/>
             </properties>
           </component>
-          <component id="acc5b" class="javax.swing.JButton" binding="button5" default-binding="true">
+          <component id="acc5b" class="javax.swing.JButton" binding="editarButton" default-binding="true">
             <constraints>
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <background color="-10092493"/>
+              <font name="Bodoni MT" size="14" style="0"/>
+              <foreground color="-460552"/>
+              <text value="Editar"/>
             </properties>
           </component>
-          <component id="b0714" class="javax.swing.JButton" binding="button6" default-binding="true">
+          <component id="b0714" class="javax.swing.JButton" binding="verButton" default-binding="true">
             <constraints>
               <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <background color="-10092493"/>
+              <font name="Bodoni MT" size="14" style="0"/>
+              <foreground color="-460552"/>
+              <text value="Ver"/>
             </properties>
           </component>
-          <component id="d9caa" class="javax.swing.JButton" binding="button7" default-binding="true">
+          <component id="d9caa" class="javax.swing.JButton" binding="eliminarButton" default-binding="true">
             <constraints>
               <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <background color="-10092493"/>
+              <font name="Bodoni MT" size="14" style="0"/>
+              <foreground color="-460552"/>
+              <text value="Eliminar"/>
             </properties>
           </component>
         </children>
       </grid>
-      <component id="61b5a" class="javax.swing.JButton" binding="button8" default-binding="true">
+      <component id="61b5a" class="javax.swing.JButton" binding="volverButton" default-binding="true">
         <constraints>
           <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <background color="-10092493"/>
+          <font name="Bodoni MT" size="14" style="0"/>
+          <foreground color="-460552"/>
+          <text value="Volver"/>
         </properties>
       </component>
     </children>
