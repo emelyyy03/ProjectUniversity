@@ -1,4 +1,6 @@
 package com.practicasesfe.Formularios;
 
-public class PerfilForm {
+import javax.swing.*;
+
+public class PerfilForm extends JPanel {
 }

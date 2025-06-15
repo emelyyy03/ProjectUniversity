@@ -1,4 +1,6 @@
 package com.practicasesfe.Formularios;
 
-public class Ciclos {
+import javax.swing.*;
+
+public class Ciclos extends JPanel {
 }

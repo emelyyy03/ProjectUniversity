@@ -1,4 +1,6 @@
 package com.practicasesfe.Formularios;
 
-public class Horarios {
+import javax.swing.*;
+
+public class Horarios extends JPanel {
 }

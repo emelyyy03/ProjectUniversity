@@ -1,4 +1,6 @@
 package com.practicasesfe.Formularios;
 
-public class AulasForm {
+import javax.swing.*;
+
+public class AulasForm extends JPanel {
 }
