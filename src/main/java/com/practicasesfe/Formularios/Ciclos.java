@@ -16,4 +16,9 @@ public class Ciclos extends JPanel {
     private JButton editarButton;
     private JButton verButton;
     private JButton eliminarButton;
+
+    public JPanel getRootPanel() {
+        return rootPanel;
+    }
+
 }

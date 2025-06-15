@@ -64,7 +64,7 @@ public class FormularioPrincipal {
         contentPanel.add(new MateriaForm(), "materia");
         contentPanel.add(new Horarios(), "horarios");
         contentPanel.add(new EstudianteHorario(), "estudianteHorario");
-        contentPanel.add(new Ciclos(), "ciclos");
+        contentPanel.add(new Ciclos().getRootPanel(), "ciclos");
         contentPanel.add(new AulasForm(), "aulas");
         contentPanel.add(new ProgramasAcademicosForm(), "programas");
 
