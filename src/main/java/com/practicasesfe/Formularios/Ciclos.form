@@ -55,7 +55,8 @@
         </constraints>
         <properties>
           <background color="-460552"/>
-          <foreground color="-460552"/>
+          <font name="Arial" size="12" style="0"/>
+          <foreground color="-15592942"/>
         </properties>
       </component>
       <component id="efcc2" class="javax.swing.JSpinner" binding="spinner1" default-binding="true">
@@ -64,7 +65,8 @@
         </constraints>
         <properties>
           <background color="-460552"/>
-          <foreground color="-460552"/>
+          <font name="Arial" size="12" style="0"/>
+          <foreground color="-15592942"/>
         </properties>
       </component>
       <component id="1ca3f" class="javax.swing.JSpinner" binding="spinner2" default-binding="true">
@@ -73,7 +75,8 @@
         </constraints>
         <properties>
           <background color="-460552"/>
-          <foreground color="-460552"/>
+          <font name="Arial" size="12" style="0"/>
+          <foreground color="-15592942"/>
         </properties>
       </component>
       <component id="df6d8" class="javax.swing.JLabel">
@@ -115,7 +118,7 @@
         <properties>
           <background color="-1644826"/>
           <cellSelectionEnabled value="false"/>
-          <foreground color="-460552"/>
+          <foreground color="-15592942"/>
           <gridColor color="-16777216"/>
         </properties>
       </component>
