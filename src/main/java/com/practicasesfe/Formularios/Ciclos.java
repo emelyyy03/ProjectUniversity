@@ -20,7 +20,6 @@ public class Ciclos extends JPanel {
     private JSpinner spinner1;
     private JSpinner spinner2;
     private JTable table1;
-    private JButton volverButton;
     private JButton guardarButton;
     private JButton cancelarButton;
     private JButton buscarButton;
@@ -80,10 +79,6 @@ public class Ciclos extends JPanel {
 
         buscarButton.addActionListener(e -> buscarCiclos());
 
-        volverButton.addActionListener(e -> {
-            JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
-            frame.dispose(); // o cambiar el panel al menú principal si es un JFrame contenedor
-        });
 
         // Maneja la selección de filas en la tabla
         table1.getSelectionModel().addListSelectionListener(e -> {
