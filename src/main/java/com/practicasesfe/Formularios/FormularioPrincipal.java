@@ -4,9 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.geom.AffineTransform;
 
-import com.formdev.flatlaf.FlatDarkLaf;
 import com.practicasesfe.dominio.User;
 
 public class FormularioPrincipal {
@@ -73,7 +71,7 @@ public class FormularioPrincipal {
         // Agregar formularios al contentPanel
         contentPanel.add(new PerfilForm(), "perfil");
         contentPanel.add(new UsuariosForm(), "usuarios");
-        contentPanel.add(new Estudiantes().getRootPanel(), "estudiantes");
+        contentPanel.add(new EstudiantesForm().getRootPanel(), "estudiantes");
         contentPanel.add(new DocentesForm(), "docentes");
         contentPanel.add(new MateriaForm(), "materia");
         contentPanel.add(new Horarios().getRootPanel(), "horarios");

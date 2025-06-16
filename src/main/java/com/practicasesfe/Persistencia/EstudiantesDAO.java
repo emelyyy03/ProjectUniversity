@@ -5,6 +5,8 @@ import com.practicasesfe.dominio.Estudiantes;
 import java.math.BigDecimal;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
+
 
 public class EstudiantesDAO {
     //Propiedades
@@ -189,4 +191,33 @@ public class EstudiantesDAO {
         }
         return estudiantes;
     }
+
+    public List<Integer> getIdsUsuarios() throws SQLException {
+        List<Integer> ids = new ArrayList<>();
+        String sql = "SELECT id_usuario FROM usuarios";
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        try {
+            stmt = conn.connect().prepareStatement(sql);
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                ids.add(rs.getInt("id_usuario"));
+            }
+
+            stmt.close();
+            rs.close();
+        } catch (SQLException e) {
+            throw new SQLException("Error al obtener los IDs de usuarios: " + e.getMessage(), e);
+        } finally {
+            stmt = null;
+            rs = null;
+            conn.disconnect();
+        }
+
+        return ids;
+    }
+
+
 }
