@@ -12,7 +12,6 @@ public class Estudiantes extends JPanel {
     private JComboBox comboBox1;
     private JComboBox comboBox2;
     private JSpinner spinner1;
-    private JButton volverButton;
     private JButton guardarButton;
     private JButton cancelarButton;
     private JButton buscarButton;

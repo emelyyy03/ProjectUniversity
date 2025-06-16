@@ -1,6 +1,7 @@
 package com.practicasesfe;
 
 import com.practicasesfe.Formularios.FormularioPrincipal;
+import com.practicasesfe.Formularios.LoginForm;
 
 import javax.swing.*;
 
@@ -27,6 +28,8 @@ public class Main {
             frame.setSize(900, 600);
             frame.setLocationRelativeTo(null); // Centrar
             frame.setVisible(true);
+            LoginForm loginForm = new LoginForm((mainForm));
+            loginForm.setVisible(true);
         });
     }
 }
