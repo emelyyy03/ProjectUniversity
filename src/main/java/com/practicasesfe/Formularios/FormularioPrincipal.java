@@ -72,7 +72,7 @@ public class FormularioPrincipal {
         contentPanel.add(panelBienvenida, "inicio");
 
         // Agregar formularios al contentPanel
-        contentPanel.add(new UsuariosForm(), "usuarios");
+        contentPanel.add(new UsuariosForm().getRootPanel(), "usuarios");
         contentPanel.add(new EstudiantesForm().getRootPanel(), "estudiantes");
         contentPanel.add(new DocentesForm(), "docentes");
         contentPanel.add(new MateriaForm(), "materia");
