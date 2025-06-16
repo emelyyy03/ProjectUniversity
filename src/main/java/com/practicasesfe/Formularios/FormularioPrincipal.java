@@ -7,8 +7,22 @@ import java.awt.event.MouseEvent;
 import java.awt.geom.AffineTransform;
 
 import com.formdev.flatlaf.FlatDarkLaf;
+import com.practicasesfe.dominio.User;
 
 public class FormularioPrincipal {
+
+    //Propiedad de autenticacion
+    private User userAutenticate;
+    public User getUserAutenticate() {
+        return userAutenticate;
+    }
+
+    public void setUserAutenticate(User userAutenticate) {
+        this.userAutenticate = userAutenticate;
+    }
+
+
+
     //private JPanel rootPanel;
     private JPanel contentPanel;
     private String opcionActual= "";
