@@ -113,8 +113,8 @@ public class UsuariosForm extends JPanel {
         String email = txtEmail.getText().trim();
         String password = new String(txtPass.getPassword()).trim();
         String rol = (String) cboRol.getSelectedItem();
-        Date fechaCreacion = (Date) spinner1.getValue();
-        Date fechaActualizacion = (Date) spinner2.getValue();
+        Date fechaCreacion = convertirFecha(spinner1.getValue());
+        Date fechaActualizacion = convertirFecha(spinner2.getValue());
 
         // Validaciones básicas
         if (nombre.isEmpty() || email.isEmpty() || password.isEmpty() || rol.equals("Seleccione un rol")) {
