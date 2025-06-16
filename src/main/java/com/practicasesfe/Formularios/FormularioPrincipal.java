@@ -69,7 +69,7 @@ public class FormularioPrincipal {
         contentPanel.add(panelBienvenida, "inicio");
 
         // Agregar formularios al contentPanel
-        contentPanel.add(new PerfilForm(), "perfil");
+
         contentPanel.add(new UsuariosForm(), "usuarios");
         contentPanel.add(new EstudiantesForm().getRootPanel(), "estudiantes");
         contentPanel.add(new DocentesForm(), "docentes");
@@ -97,8 +97,7 @@ public class FormularioPrincipal {
         menuBar.setOpaque(true);
 
         // Menús con íconos
-        JMenu menuPerfil = new JMenu("Mi Perfil");
-        menuPerfil.setIcon(new ImageIcon(getClass().getResource("/icons/perfil.png")));
+
 
         JMenu menuUsuarios = new JMenu("Usuarios");
         menuUsuarios.setIcon(new ImageIcon(getClass().getResource("/icons/usuarios1.png")));
@@ -147,8 +146,7 @@ public class FormularioPrincipal {
         menuBar.add(menuAulas);
         menuBar.add(Box.createHorizontalStrut(5)); // separador
         menuBar.add(menuProgramas);
-        menuBar.add(Box.createHorizontalGlue()); //empuja el boton al final
-        menuBar.add(menuPerfil);
+
 
         // Estilos de menus
         Color fondoClaro = new Color(102, 0, 51);
@@ -191,27 +189,9 @@ public class FormularioPrincipal {
             });
         }
 
-        // Estilo para "Mi Perfil"
-        menuPerfil.setFont(new Font("Times New Roman", Font.BOLD, 16));
-        menuPerfil.setForeground(Color.WHITE);
-        menuPerfil.setOpaque(true);
-        menuPerfil.setBackground(new Color(102, 0, 51));
-        menuPerfil.setBorder(BorderFactory.createEmptyBorder(6, 18, 6, 18));
 
-        menuPerfil.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                menuPerfil.setBackground(new Color(255, 255, 255, 30));
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-                menuPerfil.setBackground(new Color(102, 0, 51));
-            }
-        });
 
         // Asociar eventos
-        menuPerfil.addMouseListener(menuClick("perfil"));
         menuUsuarios.addMouseListener(menuClick("usuarios"));
         menuEstudiantes.addMouseListener(menuClick("estudiantes"));
         menuDocentes.addMouseListener(menuClick("docentes"));
