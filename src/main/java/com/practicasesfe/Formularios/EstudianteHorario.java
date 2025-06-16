@@ -9,7 +9,6 @@ public class EstudianteHorario extends JPanel {
     private JButton asignarHorarioButton;
     private JTable table2;
     private JButton eliminarAsignacionButton;
-    private JButton volverButton;
 
     public JPanel getRootPanel() {
         return rootPanel;
